@@ -75,12 +75,12 @@ public class LoofExer {
 		// ** **
 		// *****
 		
-//		for (int i=0; i<4+1; i++) {
+//		for (int i=0; i<4+1; i++) {  //for 문 시작. i 가 0으로 시작해서 5보다 작으면 다음 for 문으로 넘어가고 5보다 크면 for 문 종료
 //			for(int j=0; j<4+1; j++) {
 //				if(i%4==0 || j%4==0 || i==j || i*j==3) {
 //					System.out.print("*");
 //				}else {
-//					System.out.print("O");
+//					System.out.print(" ");
 //				}
 //			}
 //			System.out.println();
@@ -147,7 +147,7 @@ public class LoofExer {
 		int key3 = 6;
 		for (int i=0; i<key3+1 ; i++) {
 			for(int j=0; j<key3+1; j++) {
-				if(j==key3/2 || i==key3/2 || ) {				
+				if(key3/2==j || key3/2==i) {				
 					System.out.print("*");
 				}else {
 					System.out.print(" ");
