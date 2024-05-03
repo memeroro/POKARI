@@ -3,16 +3,16 @@ package javabasic;
 public class ArrayExer2 {
 	public static void main(String[] args) {
 		
-//		// 실습 1) 1~100까지의 정수를 배열에 담아 출력
-//		int[] intArray = new int[100];
-//		int intArrayLeng = intArray.length;
-//		
-//		
-//		for(int i=0; i<intArrayLeng; i++) {
-//			intArray[i] = i + 1;
-//			System.out.println(intArray[i]);
-//		}
-//		
+		// 실습 1) 1~100까지의 정수를 배열에 담아 출력
+		int[] intArray = new int[100];
+		int intArrayLeng = intArray.length;
+		
+		
+		for(int i=0; i<intArrayLeng; i++) {
+			intArray[i] = i + 1;
+			System.out.println(intArray[i]);
+		}
+		
 //		
 //		// 실습 2) 1~100까지의 정수 중에서 홀수만 배열에 담아 출력
 //		int[] intArray2 = new int[50];
@@ -47,56 +47,56 @@ public class ArrayExer2 {
 //		}
 		
 		// 실습 4) 개인별 / 과목별 총점과 평균을 실습 3)에 추가해서 출력
-		String[] nameArr2 = {"홍길동", "강감찬", "이순신"}; //string 값으로 이름 출력
-		int[][] scoreArr2 = {						   //2차원 배열 시작
-				{100,90,80},						  
-				{90,80,70},
-				{80,70,60}
-		};
-		
-		//개인별 총점/평균
-		int[][]pAgg = {
-				{0,0}, 									//홍길동 총점/평균
-				{0,0}, 									//강감찬 총점/평균
-				{0,0}
-		};
-		//과목별 총점/평균
-		int[][]sAgg = {
-				{0,0}, 									//국어 총점/평균
-				{0,0},
-				{0,0}
-		};
-		
-		
-		
-		System.out.printf("\n%5s %4s %3s %3s %3s %3s","이름","국어","영어","수학","총점","평균"); //문자열 출력
-			
-		int nameArrLeng2 = nameArr2.length; 			  		 //nameArrLeng2에 3값 저장
-		int scoreArrLeng2 = scoreArr2.length;			  		 //scoreArrLeng2에 3값 저장
-		for(int i=0; i<nameArrLeng2; i++) {						 //i 는 0부터 시작하고 3보다 작으면 for 문 실행
-			System.out.printf("\n%5s", nameArr2[i]);			 
-			for(int j=0; j<scoreArrLeng2; j++){
-				pAgg[i][0]+=scoreArr2[i][j]; 					 // 개인별 총점
-				sAgg[j][0]+=scoreArr2[i][j]; 					 // 과목별 총점
-				System.out.printf("%5d",scoreArr2[i][j]);
-			}
-			pAgg[i][1]=pAgg[i][0]/scoreArrLeng2; 				 //개인별 평균
-			System.out.printf("%5d %4d",pAgg[i][0],pAgg[i][1]);
-		}
-			for(int i=0; i<scoreArrLeng2; i++) {
-				sAgg[i][1]=sAgg[i][0]/scoreArrLeng2; 			 //과목별 평균
-			}
-			
-			int sAggLeng = sAgg[0].length;
-			for(int i=0; i<sAggLeng; i++) {
-				System.out.printf("\n%7s", i ==0 ? "총점" : "평균");// i 가 0이면 총점 출력, 0이 아니면 평균 출력(3항연산자)
-				for(int j=0; j<scoreArrLeng2; j++) {			  
-					System.out.printf("%7d", sAgg[j][i]);		  
-				}
-			}
-			for(int i=0; i<20; i++) {
-				System.out.println();
-			}
+//		String[] nameArr2 = {"홍길동", "강감찬", "이순신"}; //string 값으로 이름 출력
+//		int[][] scoreArr2 = {						   //2차원 배열 시작
+//				{100,90,80},						  
+//				{90,80,70},
+//				{80,70,60}
+//		};
+//		
+//		//개인별 총점/평균
+//		int[][]pAgg = {
+//				{0,0}, 									//홍길동 총점/평균
+//				{0,0}, 									//강감찬 총점/평균
+//				{0,0}
+//		};
+//		//과목별 총점/평균
+//		int[][]sAgg = {
+//				{0,0}, 									//국어 총점/평균
+//				{0,0},
+//				{0,0}
+//		};
+//		
+//		
+//		
+//		System.out.printf("\n%5s %4s %3s %3s %3s %3s","이름","국어","영어","수학","총점","평균"); //문자열 출력
+//			
+//		int nameArrLeng2 = nameArr2.length; 			  		 //nameArrLeng2에 3값 저장
+//		int scoreArrLeng2 = scoreArr2.length;			  		 //scoreArrLeng2에 3값 저장
+//		for(int i=0; i<nameArrLeng2; i++) {						 //i 는 0부터 시작하고 3보다 작으면 for 문 실행
+//			System.out.printf("\n%5s", nameArr2[i]);			 
+//			for(int j=0; j<scoreArrLeng2; j++){
+//				pAgg[i][0]+=scoreArr2[i][j]; 					 // 개인별 총점
+//				sAgg[j][0]+=scoreArr2[i][j]; 					 // 과목별 총점
+//				System.out.printf("%5d",scoreArr2[i][j]);
+//			}
+//			pAgg[i][1]=pAgg[i][0]/scoreArrLeng2; 				 //개인별 평균
+//			System.out.printf("%5d %4d",pAgg[i][0],pAgg[i][1]);
+//		}
+//			for(int i=0; i<scoreArrLeng2; i++) {
+//				sAgg[i][1]=sAgg[i][0]/scoreArrLeng2; 			 //과목별 평균
+//			}
+//			
+//			int sAggLeng = sAgg[0].length;
+//			for(int i=0; i<sAggLeng; i++) {
+//				System.out.printf("\n%7s", i ==0 ? "총점" : "평균");// i 가 0이면 총점 출력, 0이 아니면 평균 출력(3항연산자)
+//				for(int j=0; j<scoreArrLeng2; j++) {			  
+//					System.out.printf("%7d", sAgg[j][i]);		  
+//				}
+//			}
+//			for(int i=0; i<20; i++) {
+//				System.out.println();
+//			}
 		
 	}
 }

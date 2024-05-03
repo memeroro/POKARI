@@ -2,11 +2,12 @@
  * 
  * 개인과제
  * 과제명		: 배열로또
- * 제출마감일  : 5/6(화) 
+ * 제출마감일  : 5/6(화)
  * 과제설명	: 배열을 이용해서 로또 645 프로그램을 작성하세요
  * 
  * 프로세스
  * 1. 프로그램 시작 시 사용자에게 7개의 서로 다른 1~45사이의 숫자를 입력 받는다
+ * 
  * 
  * 2. 프로그램에서 랜덤한 숫자를 순서대로 7개 추출
  * 
@@ -17,7 +18,7 @@
  * 	  프로그램에서 추출한 숫자 4개와 사용자가 입력한 4개가 일치하면 4등
  * 	  프로그램에서 추출한 숫자 3개와 사용자가 입력한 3개가 일치하면 3등
  * 	  나머지는 "꽝~! 다음 기회에"
- * 	
+ * 
  * 4. 예시
  * 	  사용자가 1 1 2 3 4 5 6 입력 시 => 중복 숫자가 있습니다 다시 입력해주세요!
  *	  사용자가 1 2 3 4 5 6 7 입력하고 프로그램에서 랜덤 추출한 숫자가 1 2 3 4 5 6 45 => 1등
@@ -39,15 +40,36 @@
  */
 package javabasic;
 
+import java.util.Scanner;
+
 public class ArrayLotto {
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int [] number = new int[7];
+		
+		System.out.println("로또번호 시뮬레이션에 오신걸 환영합니다");
+		System.out.println("1부터 45까지 숫자를 입력해주세요");
+		System.out.println("[주의] 중복 숫자 불가");
+		// 1. 프로그램 시작 시 사용자에게 7개의 서로 다른 1~45사이의 숫자를 입력 받는다
+		for(int i=0; i<7; i++) {
+			number[i] = sc.nextInt();
+			
+			if(number[i]<46 && number[i]>0) {
+			}else {
+				System.out.println("[주의] 1~45까지의 숫자만 입력해주세요");
+				break;
+			}
+			
+		}
+		for (int i=0; i<7; i++) {
+			System.out.println((int)(Math.random()*45)+1);
+		
+		}
 		
 		//Math.random() : 0.0<=랜덤실수<1.0
 		//(int)(Math.random()*45)+1 : 1~45 중 랜덤한 정수
 		
 		// 중복제거 안된 7개의 1~45 범위의 랜덤 정수
-		for (int i=0; i<7; i++) {
-		System.out.println((int)(Math.random()*45)+1);
-		}
+		
 	}
 }
