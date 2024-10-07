@@ -1,0 +1,112 @@
+/* find.css */
+
+/* 애니메이션 효과를 위한 키프레임 */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+body {
+    background-image: url('/StoryCraft/resources/img/id.png'); /* 새로운 배경 이미지 경로 */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeInUp 0.8s ease-out;
+    position: relative; /* 로고 위치 조정을 위해 상대 위치 설정 */
+}
+
+.logo {
+    height: 100px;
+    cursor: pointer;
+    margin-left: 40px;
+    position: absolute; /* 절대 위치 지정 */
+    top: 20px;          /* 상단에서 20px 떨어짐 */
+    left: -20px;            /* 왼쪽 끝에 위치 */
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  background-color: rgba(0, 0, 0, 0.5); /* 더 낮은 투명도 */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-out;
+}
+
+/* 제목 */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f5f5f5; /* 더 진한 색상 */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 인풋 필드 스타일 */
+.form-floating {
+    margin-bottom: 15px;
+}
+
+.form-floating label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #777;
+}
+
+/* 인풋 필드 스타일 */
+.form-control {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+  color: #ffffff; /* 글자 색상을 흰색으로 변경 */
+  background-color: rgba(255, 255, 255, 0.1); /* 인풋 필드 배경 투명도 */
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+.form-control::placeholder {
+    color: #cccccc; /* 밝은 회색 placeholder */
+    opacity: 1;
+}
+
+/* 버튼 스타일 */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #400080;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #400040;
+    transform: translateY(-3px);
+}
